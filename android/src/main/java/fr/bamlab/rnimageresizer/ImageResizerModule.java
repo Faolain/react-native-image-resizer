@@ -60,6 +60,9 @@ class ImageResizerModule extends ReactContextBaseJavaModule {
             response.putString("path", resizedImage.getAbsolutePath());
             response.putString("uri", Uri.fromFile(resizedImage).toString());
             response.putString("name", resizedImage.getName());
+            if (outputFilename != null) {
+                response.putString("newName", outputFilename);
+            }
             response.putDouble("size", resizedImage.length());
             // Invoke success
             successCb.invoke(response);

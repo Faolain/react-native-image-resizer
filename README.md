@@ -67,6 +67,7 @@ compressFormat | Can be either JPEG, PNG or WEBP (android only).
 quality | A number between 0 and 100. Used for the JPEG compression.
 rotation | Rotation to apply to the image, in degrees, for android. On iOS, rotation is limited (and rounded) to multiples of 90 degrees.
 outputPath | The resized image path. If null, resized image will be stored in cache folder. To set outputPath make sure to add option for rotation too (if no rotation is needed, just set it to 0).
+outputFilename | Name of file you wish the image to be saved as. This file will overwrite any existing filenames. Default name is current timestamp. Android only. 
 
 ## Other open-source modules by the folks at [BAM](http://github.com/bamlab)
 
