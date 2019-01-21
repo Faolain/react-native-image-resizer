@@ -75,9 +75,6 @@ class ImageResizer {
         }
 
         File newFile = new File(saveDirectory, fileName + "." + compressFormat.name());
-        if(!newFile.createNewFile()) {
-            throw new IOException("The file already exists");
-        }
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         bitmap.compress(compressFormat, quality, outputStream);
